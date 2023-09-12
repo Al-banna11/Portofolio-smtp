@@ -1,0 +1,461 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('lokasi/font/Roboto-500.woff2') format('woff2'),
+       url('lokasi/font/Roboto-500.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-roboto-500 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 20px;
+  background: purple;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.button:hover span {
+  transform: translateX(5em);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+@keyframes upAndDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Tambahkan animasi ke gambar */
+.animatedUpDown {
+  animation: upAndDown 2s infinite;
+  box-shadow: #7e22ce;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar.transparent {
+  background-color: #7e22ce;
+  transition: background-color 0.3s ease;
+}
+
+.navbar {
+  background-color: #7e22ce;
+  color: #fff;
+  display: flex;
+  justify-content: ;
+  padding: 10px 20px;
+}
+
+.navbar.opaque {
+  opacity: 50%;
+}
+
+.navbar-brand a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: none;
+  background-color: #9e37f8;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#home {
+  padding-top: 6rem;
+}
+
+/* Gaya umum untuk ikon */
+.btn i {
+  font-size: 24px;
+}
+
+/* Gaya saat tidak dihover */
+.btn i:hover {
+  color: purple; /* Ubah warna sesuai keinginan Anda */
+}
+
+#about {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+  #home {
+    padding-top: 3rem;
+  }
+
+  #about .w-full {
+    width: 100%;
+    height: auto;
+  }
+
+  #about .w-full.md:w-1/2 {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #about .btn {
+    margin: 0.5rem;
+  }
+}
+
+a {
+  text-decoration: none; /* Menghapus garis bawah tautan */
+  font-weight: bold; /* Mengatur ketebalan font menjadi tebal */
+  font-size: 18px; /* Ukuran font */
+  color: #333; /* Warna teks */
+  transition: color 0.3s ease; /* Efek transisi perubahan warna saat dihover */
+}
+
+a:hover {
+  color: #a15fdb; /* Warna teks saat dihover */
+}
+
+#dark-mode-toggle {
+  padding: 5px 10px;
+  font-size: 14px;
+  width: 30px; /* Sesuaikan lebar sesuai keinginan */
+  height: 30px; /* Sesuaikan tinggi sesuai keinginan */
+  margin-bottom: 10px;
+}
+.elegant-font {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold; /* Pilihan: normal atau bold sesuai preferensi Anda */
+  font-size: 24px; /* Sesuaikan ukuran font sesuai keinginan Anda */
+  color: #333; /* Sesuaikan warna sesuai keinginan Anda */
+  text-decoration: none; /* Untuk menghapus garis bawah dari tautan */
+}
+
+#dark-mode-toggle {
+  color: #fff;
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 50px;
+  /text-decoration: none;
+  margin-bottom: 10px;
+}
+
+#dark-mode-toggle:hover {
+  background-color: #555; /* Warna latar belakang tombol saat digulirkan */
+}
+
+/* CSS untuk mode gelap */
+.dark-mode {
+  background-color: #1b1919; /* Warna latar belakang untuk mode gelap */
+  color: #fff; /* Warna teks untuk mode gelap */
+}
+button {
+  font-family: inherit;
+  font-size: 20px;
+  background: #7e22ce;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+/* CSS untuk navbar responsif */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Susun elemen-elemen vertikal pada layar kecil */
+    align-items: center; /* Tengahkan elemen-elemen dalam navbar */
+    padding: 20px 0; /* Ruang padding atas dan bawah pada layar kecil */
+  }
+
+  .navbar-brand {
+    margin-bottom: 20px; /* Tambahkan margin bawah pada brand pada layar kecil */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Susun link-link vertikal pada layar kecil */
+    text-align: center; /* Tengahkan teks pada layar kecil */
+  }
+
+  .nav-links li {
+    margin-bottom: 10px; /* Tambahkan margin bawah pada link pada layar kecil */
+  }
+}
+
+/* Tambahkan CSS responsif untuk bagian Hero */
+@media screen and (max-width: 768px) {
+  #home {
+    padding-top: 20px; /* Ruang atas pada layar kecil */
+  }
+
+  .col-lg-5 {
+    width: 100%; /* Lebar penuh pada layar kecil */
+    text-align: center; /* Tengahkan gambar dan teks */
+    margin-right: 0; /* Hapus margin kanan */
+  }
+
+  .animatedUpDown {
+    display: none; /* Sembunyikan gambar pada layar kecil */
+  }
+
+  .flex-warp {
+    flex-direction: column-reverse; /* Susun vertikal pada layar kecil */
+  }
+}
+
+/* Tambahkan CSS responsif untuk bagian About */
+@media screen and (max-width: 768px) {
+  #about {
+    padding-top: 20px; /* Ruang atas pada layar kecil */
+  }
+
+  .custom-h4 {
+    font-size: 24px; /* Ubah ukuran teks */
+  }
+
+  .text-secondary.mb-10 {
+    font-size: 18px; /* Ubah ukuran teks */
+  }
+}
+
+/* Tambahkan CSS responsif untuk bagian Portfolio */
+@media screen and (max-width: 768px) {
+  #portfolio {
+    padding-top: 20px; /* Ruang atas pada layar kecil */
+  }
+
+  .text-md.text-secondary {
+    font-size: 16px; /* Ubah ukuran teks */
+  }
+
+  .mb-12.p-2.md\:w-1\/2 {
+    width: 100%; /* Lebar penuh pada layar kecil */
+  }
+
+  .h-64.object-cover.transition-transform.transform.hover\:scale-105 {
+    height: auto; /* Atur tinggi gambar agar proporsional */
+  }
+}
+
+/* Tambahkan CSS responsif untuk bagian Clients */
+@media screen and (max-width: 768px) {
+  #clients {
+    padding-top: 20px; /* Ruang atas pada layar kecil */
+  }
+
+  .text-3xl {
+    font-size: 24px; /* Ubah ukuran teks */
+  }
+
+  .text-md.text-secondary {
+    font-size: 16px; /* Ubah ukuran teks */
+  }
+
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr); /* Dua kolom pada layar kecil */
+  }
+
+  .max-w-[200px].mx-4.py-4.grayscale.opacity-60.transition.duration-500.hover\:grayscale-0.hover\:opacity-100 {
+    max-width: 100%; /* Lebar penuh pada layar kecil */
+  }
+}
+
+/* Tambahkan CSS responsif untuk bagian Contact */
+@media screen and (max-width: 768px) {
+  #contact {
+    padding-top: 20px; /* Ruang atas pada layar kecil */
+  }
+
+  .text-3xl {
+    font-size: 24px; /* Ubah ukuran teks */
+  }
+
+  .text-md.text-secondary.md\:text-lg {
+    font-size: 16px; /* Ubah ukuran teks */
+  }
+
+  .h-32 {
+    height: auto; /* Atur tinggi textarea agar proporsional */
+  }
+
+  .rounded-3xl.mt-3 {
+    margin-top: 20px; /* Tambahkan margin atas pada tombol */
+  }
+}
+
+/* Tambahkan CSS responsif untuk footer */
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 20px 0; /* Ruang padding atas dan bawah pada layar kecil */
+    text-align: center; /* Tengahkan teks */
+  }
+
+  .lg\:flex-row {
+    flex-direction: column; /* Susun vertikal pada layar kecil */
+  }
+
+  .lg\:mb-0.sm\:space-y-0.sm\:space-x-5.sm\:flex-row {
+    flex-direction: row; /* Susun horizontal pada layar kecil */
+  }
+
+  .border-t {
+    border-top-width: 1px; /* Atur ketebalan garis atas footer */
+  }
+
+  .pt-16.pb-10 {
+    padding-bottom: 20px; /* Ruang bawah pada layar kecil */
+  }
+}

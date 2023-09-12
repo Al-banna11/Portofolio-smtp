@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Icon" href="img/Logo.png" type="image/Icon">
+    <title>Properties of using tailwind</title>
+    <link href="dist/output.css" rel="stylesheet">
+    <link href="css.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+
+
+    <!-- header -->
+    <nav class="navbar sticky-top transparent">
+        <div class="navbar-brand justify-center">
+            <a href="#about" class="elegant-font">Portofolio</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Project</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" id="dark-mode-toggle">Dark Mode</a></li>
+
+        </ul>
+    </nav>
+    <!-- End header -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class="pt-36 ">
+        <div class="container ">
+            <div class="flex felx-warp" style="margin-bottom: 100px;">
+                <div class="w-full self-center px-4">
+                    <h1 id="typing-h1" class="text-base font-semibold text-purple md:text-xl lg:text-2xl"> <span
+                            class="block font-bold text-dark text-4xl mt-1"></span></h1>
+                    <h2 id="typing-h2" class="font-medium text-secondary text-lg mb-5"></h2>
+                    <p id="typing-p"></p>
+
+                    <button class="button">
+                        <a href="CV-1.docx" download class="button-content"
+                            style="text-decoration: none; color: white">Download CV</a>
+                    </button>
+                </div>
+
+                <script>
+                    const h1Text = "Halo Semua 👋🏻, saya ";
+                    const h1SpanText = "Arsy al-banna";
+                    const h2Text = "Web Developer & Student";
+                    const pText = "Jadilah pahlawan data: Wujudkan perubahan, eksplorasi pengetahuan, dan inovasi!";
+
+                    let h1Index = 0;
+                    let h1SpanIndex = 0;
+                    let h2Index = 0;
+                    let pIndex = 0;
+
+                    function typeH1() {
+                        const typingElement = document.getElementById("typing-h1");
+                        if (h1Index < h1Text.length) {
+                            typingElement.innerHTML += h1Text.charAt(h1Index);
+                            h1Index++;
+                            setTimeout(typeH1, 50);
+                        } else {
+                            setTimeout(typeH1Span, 1000);
+                        }
+                    }
+
+                    function typeH1Span() {
+                        const spanElement = document.querySelector("#typing-h1 span");
+                        if (h1SpanIndex < h1SpanText.length) {
+                            spanElement.innerHTML += h1SpanText.charAt(h1SpanIndex);
+                            h1SpanIndex++;
+                            setTimeout(typeH1Span, 50);
+                        } else {
+                            setTimeout(eraseText, 1000);
+                        }
+                    }
+
+                    function eraseText() {
+                        const typingElement = document.getElementById("typing-h1");
+                        if (typingElement.innerHTML.length > h1Text.length) {
+                            typingElement.innerHTML = typingElement.innerHTML.slice(0, -1);
+                        } else {
+                            h1SpanIndex = 0;
+                            index = 0;
+                            setTimeout(typeH1, 500);
+                        }
+                    }
+
+                    typeH1();
+
+                    // Animasi mengetik untuk h2
+                    function typeH2() {
+                        const typingElement = document.getElementById("typing-h2");
+                        if (h2Index < h2Text.length) {
+                            typingElement.innerHTML += h2Text.charAt(h2Index);
+                            h2Index++;
+                            setTimeout(typeH2, 50);
+                        } else {
+                            setTimeout(eraseH2Text, 1000);
+                        }
+                    }
+
+                    function eraseH2Text() {
+                        const typingElement = document.getElementById("typing-h2");
+                        if (typingElement.innerHTML.length > 0) {
+                            typingElement.innerHTML = typingElement.innerHTML.slice(0, -1);
+                        } else {
+                            h2Index = 0;
+                            setTimeout(typeH2, 500);
+                        }
+                    }
+
+                    // Animasi mengetik untuk p
+                    function typeP() {
+                        const typingElement = document.getElementById("typing-p");
+                        if (pIndex < pText.length) {
+                            typingElement.innerHTML += pText.charAt(pIndex);
+                            pIndex++;
+                            setTimeout(typeP, 50);
+                        } else {
+                            setTimeout(erasePText, 1000);
+                        }
+                    }
+
+                    function erasePText() {
+                        const typingElement = document.getElementById("typing-p");
+                        if (typingElement.innerHTML.length > 0) {
+                            typingElement.innerHTML = typingElement.innerHTML.slice(0, -1);
+                        } else {
+                            pIndex = 0;
+                            setTimeout(typeP, 500);
+                        }
+                    }
+
+                    setTimeout(typeH2, 2000); // Delay animasi h2 selama 2 detik setelah h1 selesai.
+                    setTimeout(typeP, 4000); // Delay animasi p selama 4 detik setelah h2 selesai.
+                </script>
+
+
+                <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start mr-10"
+                    style="height: 400px; width:400px;">
+                    <img src="img/foto.png" class="img-fluid animatedUpDown" alt="" data-aos="zoom-out"
+                        data-aos-delay="300">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Hero Section End -->
+
+    <!-- about  -->
+    <section id="about" class="pt-36 pb-32">
+        <div class="container">
+            <div class="flex flex-wrap " style="margin-top: 250px;">
+                <div class="w-full md:w-1/2 px-4 mb-10">
+                    <h4 class="font-bold uppercase text-purple text-lg mb-3 custom-h4" style="font-size: 30px;">Tentang
+                        saya</h4>
+
+                    <h1 class="font-bold text-dark text-lg mb-3 " style="font-size: 40px; margin-top: 15px;">Yuk,
+                        belajar data scientist</h1>
+
+                    <p class="font-medium text-base text-secondary" style="margin-top: 10px;">Lorem ipsum dolor sit amet
+                        consectetur adipisicing
+                        elit. Illum voluptatibus exercitationem corporis odio provident aperiam cupiditate rem corrupti
+                        dolorem. Doloribus, ipsa optio! Fugiat ipsum voluptate voluptatum perspiciatis omnis laboriosam
+                        ut.</p>
+                </div>
+
+
+                <div class="w-full md:w-1/2 px-4 mb-10">
+                    <h4 class="font-bold uppercase text-dar text-lg mb-3" style="font-size: 25px;">Mari Berteman</h4>
+                    <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Recusandae doloremque soluta perspiciatis odit deserunt iusto maxime officia vitae nobis
+                        quasi esse praesentium, ipsam optio quia nihil unde, obcaecati laboriosam vel.</p>
+
+                    <div class="flex">
+                        <!-- Tautan GitHub -->
+                        <a href="https://github.com" target="_blank" class="btn rounded-full border border-purple">
+                            <i class="fa fa-github" style="font-size:24px"></i>
+                        </a>
+
+                        <!-- Tautan Instagram -->
+                        <a href="https://www.instagram.com" target="_blank"
+                            class="btn rounded-full border border-purple ml-4">
+                            <i class="fa fa-instagram" style="font-size:24px"></i>
+                        </a>
+
+                        <!-- Tautan Instagram -->
+                        <a href="https://www.instagram.com" target="_blank"
+                            class="btn rounded-full border border-purple ml-4">
+                            <i class="fa fa-facebook-f" style="font-size:24px"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <!-- End about -->
+
+    <!-- Portofolio -->
+    <section id="portfolio" class="pt-36 pb-16 bg-slate-100 relative overflow-hidden">
+        <div class="container">
+            <div class="container">
+                <div class="w-full px-4">
+                    <div class="max-w-xl mx-auto text-center mb-16">
+                        <h4 class="font-roboto-500 text-lg text-purple mb-2">
+                            Portofolio
+                        </h4>
+                        <h2 class="font-bold text-dark text-3xl mb-4">
+                            Project Terbaru
+                        </h2>
+                        <p class="font-medium text-md text-secondary">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nobis autem soluta ducimus
+                            incidunt laboriosam eaque! Enim consequuntur explicabo alias dolorum aut, officia, quod
+                            sequi
+                            velit corrupti dolores est quia.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-full px-4 flex flex-wrap justify-center">
+                    <div class="mb-12 p-2 md:w-1/2">
+                        <div class="rounded-lg shadow-md overflow-hidden">
+                            <img src="img/P1.jpg" alt=""
+                                class="w-full h-64 object-cover transition-transform transform hover:scale-105">
+                        </div>
+                        <h3 class="font-semibold text-dark text-xl mt-5 mb-3">Portofolio 1</h3>
+                        <p class="font-medium text-base text-secondary">Lorem, ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit. Autem sint soluta pariatur rerum error labore natus eum voluptas porro, magni quidem
+                            illo
+                            ut tenetur et. Similique dicta et maxime ratione?</p>
+                    </div>
+
+                    <div class="mb-12 p-2 md:w-1/2">
+                        <div class="rounded-lg shadow-md overflow-hidden">
+                            <img src="img/p2.jpg" alt=""
+                                class="w-full h-64 object-cover transition-transform transform hover:scale-105">
+                        </div>
+                        <h3 class="font-semibold text-dark text-xl mt-5 mb-3">Portofolio 2</h3>
+                        <p class="font-medium text-base text-secondary">Lorem, ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit. Autem sint soluta pariatur rerum error labore natus eum voluptas porro, magni quidem
+                            illo
+                            ut tenetur et. Similique dicta et maxime ratione?</p>
+                    </div>
+
+                    <div class="mb-12 p-2 md:w-1/2">
+                        <div class="rounded-lg shadow-md overflow-hidden">
+                            <img src="img/p3.jpg" alt=""
+                                class="w-full h-64 object-cover transition-transform transform hover:scale-105">
+                        </div>
+                        <h3 class="font-semibold text-dark text-xl mt-5 mb-3">Portofolio 3</h3>
+                        <p class="font-medium text-base text-secondary">Lorem, ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit. Autem sint soluta pariatur rerum error labore natus eum voluptas porro, magni quidem
+                            illo
+                            ut tenetur et. Similique dicta et maxime ratione?</p>
+                    </div>
+
+                    <div class="mb-12 p-2 md:w-1/2">
+                        <div class="rounded-lg shadow-md overflow-hidden">
+                            <img src="img/p4.jpeg" alt=""
+                                class="w-full h-64 object-cover transition-transform transform hover:scale-105">
+                        </div>
+                        <h3 class="font-semibold text-dark text-xl mt-5 mb-3">Portofolio 4</h3>
+                        <p class="font-medium text-base text-secondary">Lorem, ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit. Autem sint soluta pariatur rerum error labore natus eum voluptas porro, magni quidem
+                            illo
+                            ut tenetur et. Similique dicta et maxime ratione?</p>
+                    </div>
+                    
+                </div>
+            </div>
+    </section>
+    <!-- End Portofolio -->
+
+    <!-- Clients -->
+    <section id="clients" class="pt-36 pb-32 bg-slate-700 ">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16 text-lg">
+                    <h4 class="font-bold text-lg text-purple mb-2">
+                        Clients
+                    </h4>
+                    <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">
+                        Yang Pernah Berkerjasama
+                    </h2>
+                    <p class="font-medium text-md text-secondary">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, deleniti fugiat asperiores
+                        doloribus maiores, totam harum, architecto enim qui id adipisci sint accusantium hic
+                        necessitatibus?
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-full px-4">
+                <div class="flex-wrap items-center justify-center grid grid-cols-4 gap-4">
+                    <a href="#"
+                        class="max-w-[200px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100">
+                        <img src="img/anaconda-logo.png" alt="">
+                    </a>
+
+                    <a href="#"
+                        class="max-w-[200px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100">
+                        <img src="img/Caffe2-logo.png" alt="">
+                    </a>
+
+                    <a href="#"
+                        class="max-w-[200px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100">
+                        <img src="img/Numpy-logo.png" alt="">
+                    </a>
+
+                    <a href="#"
+                        class="max-w-[200px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100">
+                        <img src="img/Pytorch-logo.jpeg" alt="">
+                    </a>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- End Clients -->
+
+    <!-- Contact -->
+    <section class="pt-36 pb-32">
+        <div class="container" id="contact">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h3 class="font-semibold text-lg text-purple mb-2">
+                        Contact
+                    </h3>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">
+                        Hubungi Kami
+                    </h2>
+                    <p class="font-medium text-md text-secondary md:text-lg "> Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Perferendis nulla vel aliquam omnis dicta laborum!</p>
+                </div>
+            </div>
+
+            <form action="send.php" method="post">
+                <input type="hidden" name="email" value="kamiyakawaii4@gmail.com"><br>
+
+                <div class="w-full px-4 mb-8">
+                    <label for="email" class="text-base font-bold text-purple">Email</label>
+                    <input type="email" id="email" name="subject" placeholder="Masukkan email anda"
+                        class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-purple focus:ring-1 focus:border-purple">
+                </div>
+
+                <div class="w-full px-4 mb-8">
+                    <label for="massage" class="text-base font-bold text-purple">Pesan</label>
+                    <textarea name="body" placeholder="Masukkan pesan anda" id="message"
+                        class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-purple focus:ring-1 focus:border-purple h-32"></textarea>
+
+                </div>
+
+                <button type="submit" name="submit" class=" button rounded-3xl mt-3">
+                    <div class="svg-wrapper-1">
+                        <div class="svg-wrapper">
+                            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <span>Send</span>
+                </button>
+
+
+
+            </form>
+        </div>
+    </section>
+    <!-- End Contact -->
+
+    <!-- Footer -->
+
+    <footer class="px-4 pt-16 bg-purple">
+        <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="sm:col-span-2">
+                <a href="/" aria-label="Go home" title="Company" class="inline-flex items-center">
+                    <img src="img/Telkom.png" alt="" style="width:150px; height:150px;">
+                </a>
+                <div class="mt-6 lg:max-w-sm">
+                    <p class="text-sm text-slate-200">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                        laudantium, totam rem aperiam.
+                    </p>
+                    <p class="mt-4 text-sm text-slate-200">
+                        Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                        explicabo.
+                    </p>
+                </div>
+            </div>
+            <div class="space-y-2 text-sm">
+                <p class="text-base font-bold tracking-wide text-slate-200">Contacts</p>
+                <div class="flex">
+                    <p class="mr-1 text-slate-200">Phone:</p>
+                    <a href="tel:850-123-5021" aria-label="Our phone" title="Our phone"
+                        class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800 text-slate-200"
+                        style="text-decoration: none;">+62 813-3338-1957</a>
+                </div>
+                <div class="flex">
+                    <p class="mr-1 text-slate-200">Email:</p>
+                    <a href="mailto:info@lorem.mail" aria-label="Our email" title="Our email"
+                        class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800 text-slate-200"
+                        style="text-decoration: none;">albannarsy@gmail.com</a>
+                </div>
+                <div class="flex">
+                    <p class="mr-1 text-slate-200">Address:</p>
+                    <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer"
+                        aria-label="Our address" title="Our address"
+                        class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800 text-slate-200"
+                        style="text-decoration: none;">
+                        Jakarta Timur
+                    </a>
+                </div>
+            </div>
+            <div>
+                <span class="text-base font-bold tracking-wide text-slate-200">Social</span>
+                <div class="flex items-center mt-1 space-x-3">
+                    <a href="/" class="text-slate-200 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                            <path
+                                d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="/" class="text-slate-200 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                        <svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
+                            <circle cx="15" cy="15" r="4"></circle>
+                            <path
+                                d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="/" class="text-slate-200 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                            <path
+                                d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <p class="mt-4 text-sm text-slate-200">
+                    Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken spare ribs salami.
+                </p>
+            </div>
+        </div>
+        <div class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
+            <p class="text-sm text-slate-200">
+                © Copyright 2020 Arsy Al-banna.
+            </p>
+            <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+                <li>
+                    <a href="/"
+                        class="text-sm text-slate-200 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                        style="text-decoration: none;">F.A.Q</a>
+                </li>
+                <li>
+                    <a href="/"
+                        class="text-sm text-slate-200 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                        style="text-decoration: none;">Privacy
+                        Policy</a>
+                </li>
+                <li>
+                    <a href="/"
+                        class="text-sm text-slate-200 transition-colors duration-300 hover:text-deep-purple-accent-400">Terms
+                        &amp; Conditions</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- End Footer -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var $navbar = $(".navbar");
+            var $body = $("body");
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $navbar.removeClass("transparent").addClass("opaque");
+                } else {
+                    $navbar.removeClass("opaque").addClass("transparent");
+                }
+            });
+
+            // Tambahkan kelas 'home' ke body jika Anda berada di halaman "Home"
+            if ($body.hasClass("home")) {
+                $navbar.addClass("opaque");
+            }
+        });
+    </script>
+
+    <script>
+        // Fungsi untuk menangani klik pada tautan
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <script>// Fungsi untuk mengganti mode (terang/gelap)
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode'); // Tambah atau hapus kelas "dark-mode" pada elemen body
+        }
+
+        // Mendapatkan tombol "Dark Mode" dan menambahkan event listener untuk mengganti mode ketika diklik
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+    </script>
+
+    <script src="dist/js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

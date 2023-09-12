@@ -1,0 +1,3 @@
+ <div class="px-4">
+                    <a href="#home" class="font-bold text-lg text-purple block py-6">Arsy Al-banna</a>
+                </div>

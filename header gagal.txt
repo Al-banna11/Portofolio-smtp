@@ -1,0 +1,36 @@
+ <header>
+    <nav class="bg-purple h-20 w-full"> 
+        <input type="checkbox" id="checkbox" hidden>
+        <label for="check" class="float-right leading-[80px] text-white mr-10 text-2xl lg:hidden h-[100vh]">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <span class="text-3xl lg:text-4xl font-bold pl-12 lg:pl-24 leading-[80px] lg:leading-[80px] text-white"> Arsy Al-banna</span>
+            <ul class="float-right mr-10 lg:flex space-x-4 leading-[80px] fixed lg:relative  lg:h-0 w-[100%] lg:w-fit top-20 lg:top-0 left-[100%] lg:transition-none duration-300 bg-purple text-center text-white"> 
+                <li><a href="">Home</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">Portofolio</a></li>
+                <li><a href="">Clients</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+    </nav>
+ </header>
+
+
+
+
+
+
+ul li a{
+  padding: 10;
+}
+
+ul li a:hover{
+  border-radius: 5px;
+  background-color: #f1f5f9;
+  color: #7e22ce;
+  
+}
+
+#check:checked{
+  left: 0;
+}
